@@ -1,42 +1,31 @@
-header {
-  background-color: #112e51;
-  color: white;
-}
-
-.text-center {
-  display: block;
-  text-align: center;
-}
-
-a:visited {
-  color: inherit;
-}
+@import "header";
+@import "nav";
+@import "home";
 
 a:hover {
   text-decoration: none;
 }
 
-nav {
-  padding: 10px 0;
-  color: darkgray;
-  background-color: lightgray;
+.question {
+  margin: 30px auto;
 }
 
-nav ul {
-  margin: 0 auto;
-  list-style-type: none;
+.attach {
+  display: flex;
+  align-items: center;
+}
 
-  & > li {
-    &:before {
-      content: none;
-    }
+.flex {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 
-    margin: auto 20px;
-    display: inline-block;
+  & > * {
+    flex-basis: 0;
+    flex-grow: 1;
   }
 }
 
-.active {
-  color: black !important;
-  border-bottom: thick solid black;
+.hidden {
+  display: none !important;
 }

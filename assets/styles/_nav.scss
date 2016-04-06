@@ -1,0 +1,29 @@
+$primary-darkest: #112e51;
+
+nav {
+  padding: 10px 0;
+  background-color: lightgray;
+
+  a, a:visited {
+    color: darkgray;
+  }
+
+  & > ul {
+    margin: 0 auto;
+    list-style-type: none;
+
+    & > li {
+      margin: auto 20px;
+      display: inline-block;
+
+      .active {
+        border-bottom: thick solid $primary-darkest;
+        color: black !important;
+      }
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}

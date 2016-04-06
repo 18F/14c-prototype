@@ -1,0 +1,40 @@
+$gold: #fdb81e;
+$gold-lighter: #fad980;
+
+@mixin uswds_typography() {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7em/26px;
+}
+
+#home {
+  & > * {
+    text-align: center;
+  }
+}
+
+#options {
+  display: flex;
+  margin-top: 20px;
+
+  & > * {
+    flex: 1;
+    padding: 0 30px 30px 30px;
+    background-color: lightgray;
+    text-align: left;
+  }
+}
+
+#about {
+  margin-top: 20px;
+  border-top: 20px solid $gold;
+  padding: 20px;
+  background-color: $gold-lighter;
+  text-align: left;
+  @include uswds_typography();
+
+  & > h3 {
+    margin-top: 0;
+  }
+}

@@ -15,7 +15,8 @@ const bundler = watchify(
     transform: [reactify],
     debug: true,
     cache: {},
-    packageCache: {}
+    packageCache: {},
+    fullPaths: true
   })
 );
 
@@ -23,7 +24,7 @@ function bundle() {
   return bundler.bundle()
     .on('error', gutil.log.bind(gutil, 'Browserify error'))
     .pipe(source('./index.jsx'))
-    .pipe(buffer())
+    //.pipe(buffer())
     .pipe(rename('bundle.js'))
     .pipe(gulp.dest('./dist'));
 }
